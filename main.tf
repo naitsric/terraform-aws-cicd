@@ -6,7 +6,7 @@ data "aws_region" "default" {
 
 # Define composite variables for resources
 module "label" {
-  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.2.1"
+  source     = "git::https://github.com/naitsric/terraform-null-label.git?ref=tags/0.2.1"
   namespace  = "${var.namespace}"
   name       = "${var.name}"
   stage      = "${var.stage}"
@@ -132,7 +132,7 @@ data "aws_iam_policy_document" "codebuild" {
 }
 
 module "build" {
-  source             = "git::https://github.com/cloudposse/terraform-aws-codebuild.git?ref=tags/0.5.3"
+  source             = "git::https://github.com/naitsric/terraform-aws-codebuild.git?ref=tags/0.5.3"
   namespace          = "${var.namespace}"
   name               = "${var.name}"
   stage              = "${var.stage}"
